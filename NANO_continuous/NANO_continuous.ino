@@ -191,12 +191,12 @@ bool doJudge() {
           wrongLight();
           return 0;
         } 
-        // else if (judgeArray[i+1] != 0) {
-        //   if (judgeArray[i+1] != 4 || judgeArray[i+1] != 5) {
-        //     wrongLight();
-        //     return 0;
-        //   }
-        // }
+        else if (judgeArray[i+1] != 0) {    // end 後面只能是 beginSub
+          if (judgeArray[i+1] != 4 || judgeArray[i+1] != 5) {
+            wrongLight();
+            return 0;
+          }
+        }
       }
     } else if (judgeArray[i] == 7) {  // repeat 的條件
       if (judgeArray[i-1] != 2) {  // repeat 的條件只能在 repeat 後
