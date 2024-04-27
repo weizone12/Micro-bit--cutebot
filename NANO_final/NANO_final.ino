@@ -206,7 +206,7 @@ bool doJudge() {
           return 0;
         } 
         else if (judgeArray[i+1] != 0) {
-          if (judgeArray[i+1] != 4 || judgeArray[i+1] != 5) {
+          if (judgeArray[i+1] != 4 && judgeArray[i+1] != 5) {
             wrongLight();
             return 0;
           }
