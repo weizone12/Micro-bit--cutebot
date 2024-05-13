@@ -115,11 +115,11 @@ void preJudge() {
       judgeNum = 3;
     } else if(num == 6) {
       judgeNum = 12;
-    } else if(num == 7 || num == 8 || num == 9 || num == 10 || num == 11 || num == 12 || num == 24 || num == 28 || num == 29 || num == 30 || num == 31 || num == 32 || num == 36 || num == 37 || num == 42 || num == 43) {
+    } else if(num == 7 || num == 8 || num == 9 || num == 10 || num == 11 || num == 12 || num == 24 || num == 28 || num == 29 || num == 30 || num == 31 || num == 32 || num == 36 || num == 37 || num == 42 || num == 43 || num == 47) {
       judgeNum = 6;
-    } else if(num == 13 || num == 14 || num == 15 || num == 16 || num == 17 || num == 18 || num == 19 || num == 20 || num == 21 || num == 22 || num == 27 || num == 35 || num == 38 || num == 39) {
+    } else if(num == 13 || num == 14 || num == 15 || num == 16 || num == 17 || num == 18 || num == 19 || num == 20 || num == 21 || num == 22 || num == 27 || num == 35 || num == 38 || num == 39 || num == 46) {
       judgeNum = 7;
-    } else if(num == 23 || num == 40 || num == 41) {
+    } else if(num == 23 || num == 40 || num == 41 || num == 45) {
       judgeNum = 8;
     } else if(num == 25) {
       judgeNum = 4;
