@@ -114,7 +114,7 @@ bool doJudge() {
   int endCount = 0;                   // end 的出現次數
   int lastNum;                        // 用來記錄最近彈出堆疊的數字
   SimpleStack<int> myStack(maxSize);  // 宣告一個 Stack
-  if(judgeArray[0] != 1 && judgeArray[0] != 4 && judgeArray[0] != 5) {    // 第一個不是 begin 或 sub begin
+  if(judgeArray[0] != 1) {            // 第一個不是 begin 或 sub begin
     wrongLight();
     return 0;
   }
@@ -140,9 +140,11 @@ bool doJudge() {
       myStack.peek(&lastNum);                               // Stack 最後的元素存入 lastNum
       if(judgeArray[i-1] == 10) {                           // 如果前一個元素是 end
         myStack.push(judgeArray[i]);                        // push 進 Stack
-      } else if(myStack.isEmpty()) {                        // 如果在 begin 之前
-        myStack.push(judgeArray[i]);                        // push 進 Stack
-      } else {                                              // 如果能在 begin 和 end 之間
+      } 
+      // else if(myStack.isEmpty()) {                        // 如果在 begin 之前
+      //   myStack.push(judgeArray[i]);                        // push 進 Stack
+      // } 
+      else {                                              // 如果能在 begin 和 end 之間
         wrongLight();
         return 0;
       }
