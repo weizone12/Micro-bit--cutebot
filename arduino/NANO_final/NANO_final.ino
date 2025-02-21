@@ -1,5 +1,3 @@
-// 若有 bug，可能是因為 preJudge 最下方的 for 被註解掉了
-
 #include <IRremote.h>              // 引入 IRremote 函式庫，用於紅外線傳輸
 #include <SoftwareSerial.h>        // 引入 SoftwareSerial 函式庫，用於串列通訊
 #include <SimpleStack.h>           // 引入 SimpleStack 函式庫，使用堆疊結構
@@ -141,9 +139,9 @@ bool doJudge() {
       if(judgeArray[i-1] == 10) {                           // 如果前一個元素是 end
         myStack.push(judgeArray[i]);                        // push 進 Stack
       } 
-      // else if(myStack.isEmpty()) {                        // 如果在 begin 之前
-      //   myStack.push(judgeArray[i]);                        // push 進 Stack
-      // } 
+      else if(myStack.isEmpty()) {                        // 如果在 begin 之前或是 end sub後
+        myStack.push(judgeArray[i]);                        // push 進 Stack
+      } 
       else {                                              // 如果能在 begin 和 end 之間
         wrongLight();
         return 0;
